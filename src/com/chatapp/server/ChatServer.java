@@ -6,6 +6,7 @@ import java.util.*;
 public class ChatServer {
     private static List<ClientHandler> clients = new ArrayList<>();
    
+    @SuppressWarnings("resource")
     public static void main(String[] args) throws IOException{
         ServerSocket serversocket = new ServerSocket(5000); //serversocket is meant to listen to client connections
         System.out.println("Server started. Listening for incoming connections...");
